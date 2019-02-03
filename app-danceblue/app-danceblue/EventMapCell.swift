@@ -52,8 +52,13 @@ class EventMapCell: UITableViewCell {
     
     @objc func mapTapped() {
         if event?.address != nil {
-            UIApplication.shared.open(Router.Maps.buildAddressURL(from: (event?.address)!), options: [:], completionHandler: nil)
+            UIApplication.shared.open(Router.Maps.buildAddressURL(from: (event?.address)!), options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         }
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

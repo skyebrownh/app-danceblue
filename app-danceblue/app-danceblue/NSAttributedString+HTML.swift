@@ -22,7 +22,7 @@ extension NSAttributedString {
                 paragraphStyle.alignment = .left
                 paragraphStyle.lineSpacing = 6.0
                 
-                str.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, str.length))
+                str.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, str.length))
                 
                 
                 return str

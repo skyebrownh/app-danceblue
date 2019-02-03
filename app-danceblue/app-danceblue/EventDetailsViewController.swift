@@ -160,7 +160,7 @@ class EventDetailsViewController: UITableViewController {
                 
                 do {
                     
-                    let CALENDAR_DEFAULTS_KEY = "\(calendarEvent.title)\(startDate.description)_ADDED_TO_CALENDAR"
+                    let CALENDAR_DEFAULTS_KEY = "\(String(describing: calendarEvent.title))\(startDate.description)_ADDED_TO_CALENDAR"
                     
                     if let _: Bool = UserDefaults.standard.bool(forKey: CALENDAR_DEFAULTS_KEY), !addAnyways {
                         self.showDuplicateAlert()
@@ -192,7 +192,7 @@ class EventDetailsViewController: UITableViewController {
         
         alertController.addAction(UIAlertAction(title: "Go To Settings", style: .default, handler: { alert in
             if let url = URL(string: "app-settings:root=Privacy&path=CALENDARS") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
             
         }))
@@ -220,7 +220,7 @@ class EventDetailsViewController: UITableViewController {
         
         alertController.addAction(UIAlertAction(title: "Go To Calendar", style: .default, handler: { alert in
                 if let url = URL(string: "calshow://") {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                 }
                 
             }))
@@ -252,3 +252,8 @@ extension EventDetailsViewController: EventHeaderDelegate {
     
 }
 */
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}

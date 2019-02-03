@@ -14,7 +14,7 @@ func setUpNavigation(controller: UINavigationController?, hidesBar: Bool) {
     controller?.hidesBarsOnTap = hidesBar
     controller?.hidesBarsOnSwipe = hidesBar
     navigation.tintColor = Theme.Color.black
-    navigation.titleTextAttributes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.heavy), NSAttributedStringKey.foregroundColor : Theme.Color.black]
+    navigation.titleTextAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.heavy), NSAttributedString.Key.foregroundColor : Theme.Color.black]
     navigation.isTranslucent = true
     navigation.barTintColor = Theme.Color.white
 }

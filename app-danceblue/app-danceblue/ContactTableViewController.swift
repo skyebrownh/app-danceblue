@@ -82,7 +82,7 @@ extension ContactTableViewController: ContactDelegate {
     
     func textView(didPresentSafariViewController url: URL) {
         if url.absoluteString.contains("networkforgood") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         } else {
             let svc = SFSafariViewController(url: url)
             svc.preferredControlTintColor = Theme.Color.main
@@ -104,4 +104,9 @@ extension ContactTableViewController: SocialMediaDelegate {
         self.present(svc, animated: true, completion: nil)
     }
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

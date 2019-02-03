@@ -50,7 +50,7 @@ class BlogDetailsTableViewController: UITableViewController {
         // TODO: Dynamic Links and sharing capability
         // Right now just an image
         
-        let avc = UIActivityViewController(activityItems: ["Checkout this article on the DanceBlue Mobile App!", shareImage], applicationActivities: [])
+        let avc = UIActivityViewController(activityItems: ["Checkout this article on the DanceBlue Mobile App!", shareImage as Any], applicationActivities: [])
         present(avc, animated:  true)
     }
     
@@ -146,7 +146,7 @@ extension BlogDetailsTableViewController: BodyTextTableViewDelegate {
     
     func textView(didPresentSafariViewController url: URL) {
         if url.absoluteString.contains("networkforgood") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         } else {
             let svc = SFSafariViewController(url: url)
             svc.preferredControlTintColor = Theme.Color.main
@@ -154,4 +154,9 @@ extension BlogDetailsTableViewController: BodyTextTableViewDelegate {
         }
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

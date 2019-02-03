@@ -34,7 +34,7 @@ class ContactDetailsTableViewCell: UITableViewCell {
     func setupTextView() {
         descriptionTextView.delegate = self
         descriptionTextView.dataDetectorTypes = [.link]
-        descriptionTextView.linkTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: Theme.Color.main]
+        descriptionTextView.linkTextAttributes = convertToOptionalNSAttributedStringKeyDictionary([NSAttributedString.Key.foregroundColor.rawValue: Theme.Color.main])
         descriptionTextView.isSelectable = true
         descriptionTextView.isEditable = false
         descriptionTextView.tintColor = Theme.Color.main
@@ -69,4 +69,10 @@ extension ContactDetailsTableViewCell: UITextViewDelegate {
         delegate?.textView(didPresentSafariViewController: URL)
         return false
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }
