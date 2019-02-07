@@ -139,7 +139,7 @@ class HomeViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "RaveSegue", let raveVC = segue.destination as? RaveHourViewController {
+        if segue.identifier == "RaveSegue", let raveVC = segue.destination as? ScannerViewController {
             raveVC.delegate = self
         }
         

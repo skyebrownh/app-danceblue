@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to the camera in order to scan QR codes</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -49,7 +51,7 @@
 		<true/>
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string>""</string>
+	<string>&quot;&quot;</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>“Allow us to access your current location for directions!”</string>
 	<key>UIBackgroundModes</key>
