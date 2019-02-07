@@ -17,5 +17,9 @@ target 'app-danceblue' do
   pod 'ObjectMapper'
   pod 'Gifu'
   pod 'Kingfisher'
+  pod 'DeckTransition', '~> 2.0'
+  pod "SAConfettiView"
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
 end
