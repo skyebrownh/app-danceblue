@@ -59,7 +59,11 @@ class HomeViewController: UITableViewController {
         //self.navigationController?.setNavigationBarHidden(true, animated: false)
         setUpNavigation(controller: self.navigationController, hidesBar: false)
         Analytics.logEvent("Home_Screen_Did_Appear", parameters: nil)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Rave"), style: .plain, target: self, action: #selector(presentRave))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Rave"), style: .plain, target: self, action: #selector(presentScanner))
+    }
+    
+    @objc func presentScanner() {
+        performSegue(withIdentifier: "ScannerSegue", sender: self)
     }
     
     func setupTableView() {
@@ -130,29 +134,6 @@ class HomeViewController: UITableViewController {
     
     func sortAnnouncements() {
         announcementData.sort(by: {$0.timestamp ?? Date() > $1.timestamp ?? Date()})
-    }
-    
-    // MARK: - Rave Action
-    
-    @objc func presentRave() {
-        performSegue(withIdentifier: "RaveSegue", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "RaveSegue", let raveVC = segue.destination as? ScannerViewController {
-            raveVC.delegate = self
-        }
-        
-        if segue.identifier == "FloorPlanSegue", let ivc = segue.destination as? ImageViewController {
-            ivc.setupMap()
-        }
-        
-        
-        
-        if segue.identifier == "MoraleCupSegue", let moraleCupListVC = segue.destination as? MoraleCupTableViewController {
-            moraleCupListVC.moraleCupData = self.moraleCupData
-        }
-
     }
     
     // MARK: - Firebase
@@ -301,14 +282,6 @@ extension HomeViewController: SponsorDelegate {
         let svc = SFSafariViewController(url: url)
         svc.preferredControlTintColor = Theme.Color.main
         self.present(svc, animated: true, completion: nil)
-    }
-    
-}
-
-extension HomeViewController: RaveDelegate {
-    
-    func closeTapped() {
-        dismiss(animated: true, completion: nil)
     }
     
 }

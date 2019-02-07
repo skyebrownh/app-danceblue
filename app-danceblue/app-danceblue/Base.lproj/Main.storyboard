@@ -935,7 +935,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="jr0-7T-JBQ"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="XGg-b4-4WX" kind="presentation" identifier="RaveSegue" id="w0z-EY-kJU"/>
+                        <segue destination="XGg-b4-4WX" kind="presentation" identifier="ScannerSegue" id="w0z-EY-kJU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4g-Xt-zM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -957,7 +957,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedCell" id="nYc-lq-4zc" customClass="FeaturedCollectionViewCell" customModule="app_danceblue" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="FeaturedCell" id="nYc-lq-4zc" customClass="FeaturedCollectionViewCell" customModule="app_danceblue" customModuleProvider="target">
                                 <rect key="frame" x="20.666666666666668" y="0.0" width="373" height="440"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -977,7 +977,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBq-xn-8H5">
-                                            <rect key="frame" x="20" y="426" width="80" height="2"/>
+                                            <rect key="frame" x="20" y="377" width="80" height="2"/>
                                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="kPy-hK-RPQ"/>
@@ -997,7 +997,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyk-Ty-dhr">
-                                            <rect key="frame" x="20" y="400" width="80" height="24"/>
+                                            <rect key="frame" x="20" y="351" width="80" height="24"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -1042,7 +1042,7 @@
                                     <segue destination="2JR-9Q-Eb3" kind="show" identifier="FeaturedSegue" id="6Zq-y1-5rK"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BlogVerticalCell" id="3AN-3F-kIp" customClass="BlogVerticalCollectionViewCell" customModule="app_danceblue" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="BlogVerticalCell" id="3AN-3F-kIp" customClass="BlogVerticalCollectionViewCell" customModule="app_danceblue" customModuleProvider="target">
                                 <rect key="frame" x="106.66666666666667" y="450" width="201" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1062,7 +1062,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDa-H5-hLC">
-                                            <rect key="frame" x="0.0" y="241" width="201" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="192" width="201" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>

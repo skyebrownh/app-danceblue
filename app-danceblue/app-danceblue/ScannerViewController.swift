@@ -128,7 +128,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //        print("The received domain is: " + receivedDomain)
         //        print(code)
         
-        let modal = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "modal") as! InfoVC
+        let modal = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "modal") as! InfoViewController
 
         modal.URL = code
 
