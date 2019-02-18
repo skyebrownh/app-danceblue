@@ -18,7 +18,7 @@ protocol HomeDelegate: class {
 
 class HomeViewController: UITableViewController {
     
-    private var cellHeights: [CGFloat] = [0.0, 56.0, 120.0, 235.0, 365.0, 240.0]
+    private var cellHeights: [CGFloat] = [0.0, 56.0, 120.0, 325.0, 365.0, 240.0]
     
     private var announcementData: [Announcement] = []
     private var announcementMap: [String : Announcement] = [:]

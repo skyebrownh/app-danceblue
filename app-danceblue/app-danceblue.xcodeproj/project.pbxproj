@@ -52,9 +52,7 @@
 		CB6843871F3894ED000720F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6843851F3894ED000720F2 /* Main.storyboard */; };
 		CB74FD702023D50B000A3F2E /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74FD6F2023D50B000A3F2E /* ScannerViewController.swift */; };
 		CB780390202796FF0038C026 /* FloorPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78038F202796FF0038C026 /* FloorPlanTableViewCell.swift */; };
-		CB7803922027AE660038C026 /* MoraleCupListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7803912027AE660038C026 /* MoraleCupListTableViewCell.swift */; };
 		CB7803942027AF1A0038C026 /* MoraleTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7803932027AF1A0038C026 /* MoraleTeam.swift */; };
-		CB7803962028D48B0038C026 /* MoraleCupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7803952028D48B0038C026 /* MoraleCupTableViewController.swift */; };
 		CB7DE1D21F25267200235145 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7DE1D11F25267200235145 /* Announcement.swift */; };
 		CB7DE1DA1F2597FF00235145 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7DE1D91F2597FF00235145 /* EventDetailsViewController.swift */; };
 		CB8798751F3636B60091CA38 /* NSAttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8798741F3636B60091CA38 /* NSAttributedString+HTML.swift */; };
@@ -145,9 +143,7 @@
 		CB6843861F3894ED000720F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "app-danceblue/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		CB74FD6F2023D50B000A3F2E /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		CB78038F202796FF0038C026 /* FloorPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorPlanTableViewCell.swift; sourceTree = "<group>"; };
-		CB7803912027AE660038C026 /* MoraleCupListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraleCupListTableViewCell.swift; sourceTree = "<group>"; };
 		CB7803932027AF1A0038C026 /* MoraleTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraleTeam.swift; sourceTree = "<group>"; };
-		CB7803952028D48B0038C026 /* MoraleCupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoraleCupTableViewController.swift; sourceTree = "<group>"; };
 		CB7DE1D11F25267200235145 /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		CB7DE1D91F2597FF00235145 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		CB7DE1DB1F28418700235145 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -208,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				CB74FD6F2023D50B000A3F2E /* ScannerViewController.swift */,
-				CB7803952028D48B0038C026 /* MoraleCupTableViewController.swift */,
 				3DAF0D44220C81FF00EDBEDE /* InfoViewController.swift */,
 			);
 			name = Marathon;
@@ -219,7 +214,6 @@
 			children = (
 				CB0CB6DF20224427000C0664 /* MoraleCupTableViewCell.swift */,
 				CB78038F202796FF0038C026 /* FloorPlanTableViewCell.swift */,
-				CB7803912027AE660038C026 /* MoraleCupListTableViewCell.swift */,
 			);
 			name = Marathon;
 			sourceTree = "<group>";
@@ -270,9 +264,9 @@
 				CB665BB31FA6CD9200A1D567 /* Sponsor.swift */,
 				CB0E9A7B1F24280200A717DC /* Event.swift */,
 				CB7803932027AF1A0038C026 /* MoraleTeam.swift */,
-				CB6604FE1F61999D00FBC1CA /* Blog */,
 				3DAF0D46220C86EF00EDBEDE /* NetworkService.swift */,
 				3DAF0D48220C879700EDBEDE /* DataModel.xcdatamodeld */,
+				CB6604FE1F61999D00FBC1CA /* Blog */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -728,7 +722,6 @@
 				CBC6A9421F6984140045B9B9 /* Router.swift in Sources */,
 				CB8798761F3637940091CA38 /* EventsTableViewController.swift in Sources */,
 				CB7DE1D21F25267200235145 /* Announcement.swift in Sources */,
-				CB7803922027AE660038C026 /* MoraleCupListTableViewCell.swift in Sources */,
 				CB19AF371F32C86100429C18 /* BCBodyImage.swift in Sources */,
 				CB0E9A7A1F24206200A717DC /* EventTableViewCell.swift in Sources */,
 				CB0E9A7C1F24280200A717DC /* Event.swift in Sources */,
@@ -778,7 +771,6 @@
 				CB19AF3B1F32C94800429C18 /* BlogDetails.swift in Sources */,
 				CB19AF411F3499A600429C18 /* SectionTitleTableViewCell.swift in Sources */,
 				CB22DFB41F96545F00C4927E /* AnnouncementTableViewCell.swift in Sources */,
-				CB7803962028D48B0038C026 /* MoraleCupTableViewController.swift in Sources */,
 				CB780390202796FF0038C026 /* FloorPlanTableViewCell.swift in Sources */,
 				CB8CDCFA1F2FFD3500CF822A /* Blog.swift in Sources */,
 				CBF6374A1F744E9000270724 /* EventDescriptionCell.swift in Sources */,
