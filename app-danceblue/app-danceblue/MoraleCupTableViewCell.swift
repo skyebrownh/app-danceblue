@@ -47,7 +47,7 @@ class MoraleCupTableViewCell: UITableViewCell {
     
     func configureCell(with data: [MoraleTeam]) {
         setupStyles()
-        if data.count > 5 {
+        if data.count >= 5 {
             configureFirstPlace(with: data)
             configureSecondPlace(with: data)
             configureThirdPlace(with: data)
@@ -59,22 +59,22 @@ class MoraleCupTableViewCell: UITableViewCell {
     
     func configureFirstPlace(with data: [MoraleTeam]) {
         firstPlaceLabel.text = "1"
-        firstPlaceTeamNumberLabel.text = "Team \(data[0].number ?? 0)"
-        firstPlaceTeamNameLabel.text = data[0].name ?? ""
+        firstPlaceTeamNumberLabel.text = data[0].name ?? ""
+        firstPlaceTeamNameLabel.text = "Team \(data[0].number ?? 0)"
         firstPlaceTeamPointsLabel.text = "\(data[0].points ?? 0) points"
     }
     
     func configureSecondPlace(with data: [MoraleTeam]) {
         secondPlaceLabel.text = "2"
-        secondPlaceTeamNumberLabel.text = "Team \(data[1].number ?? 0)"
-        secondPlaceTeamNameLabel.text = data[1].name ?? ""
+        secondPlaceTeamNumberLabel.text = data[1].name ?? ""
+        secondPlaceTeamNameLabel.text = "Team \(data[1].number ?? 0)"
         secondPlaceTeamPointsLabel.text = "\(data[1].points ?? 0) points"
     }
     
     func configureThirdPlace(with data: [MoraleTeam]) {
         thirdPlaceLabel.text = "3"
-        thirdPlaceTeamNumberLabel.text = "Team \(data[2].number ?? 0)"
-        thirdPlaceTeamNameLabel.text = data[2].name ?? ""
+        thirdPlaceTeamNumberLabel.text = data[2].name ?? ""
+        thirdPlaceTeamNameLabel.text = "Team \(data[2].number ?? 0)"
         thirdPlaceTeamPointsLabel.text = "\(data[2].points ?? 0) points"
     }
     
