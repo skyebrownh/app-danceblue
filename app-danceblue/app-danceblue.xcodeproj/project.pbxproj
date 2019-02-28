@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D170F64221F2C52001DF6B3 /* RaveHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D170F63221F2C52001DF6B3 /* RaveHourViewController.swift */; };
 		3DAF0D45220C81FF00EDBEDE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0D44220C81FF00EDBEDE /* InfoViewController.swift */; };
 		3DAF0D47220C86EF00EDBEDE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0D46220C86EF00EDBEDE /* NetworkService.swift */; };
 		3DAF0D4A220C879700EDBEDE /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF0D48220C879700EDBEDE /* DataModel.xcdatamodeld */; };
@@ -94,6 +95,7 @@
 /* Begin PBXFileReference section */
 		16C6CFE043AAFC2142091E3D /* Pods-app-danceblue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-danceblue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app-danceblue/Pods-app-danceblue.debug.xcconfig"; sourceTree = "<group>"; };
 		1A8A115CD742EF18B9148B54 /* Pods-app-danceblue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-danceblue.release.xcconfig"; path = "Pods/Target Support Files/Pods-app-danceblue/Pods-app-danceblue.release.xcconfig"; sourceTree = "<group>"; };
+		3D170F63221F2C52001DF6B3 /* RaveHourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaveHourViewController.swift; sourceTree = "<group>"; };
 		3DAF0D44220C81FF00EDBEDE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		3DAF0D46220C86EF00EDBEDE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3DAF0D49220C879700EDBEDE /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				CB74FD6F2023D50B000A3F2E /* ScannerViewController.swift */,
 				3DAF0D44220C81FF00EDBEDE /* InfoViewController.swift */,
+				3D170F63221F2C52001DF6B3 /* RaveHourViewController.swift */,
 			);
 			name = Marathon;
 			sourceTree = "<group>";
@@ -723,6 +726,7 @@
 				CB8798761F3637940091CA38 /* EventsTableViewController.swift in Sources */,
 				CB7DE1D21F25267200235145 /* Announcement.swift in Sources */,
 				CB19AF371F32C86100429C18 /* BCBodyImage.swift in Sources */,
+				3D170F64221F2C52001DF6B3 /* RaveHourViewController.swift in Sources */,
 				CB0E9A7A1F24206200A717DC /* EventTableViewCell.swift in Sources */,
 				CB0E9A7C1F24280200A717DC /* Event.swift in Sources */,
 				3DAF0D45220C81FF00EDBEDE /* InfoViewController.swift in Sources */,

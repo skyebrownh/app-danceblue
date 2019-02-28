@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4R0-Hz-pRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2504" y="2124"/>
+            <point key="canvasLocation" x="-2091" y="2127"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="q06-Px-pES">
@@ -275,7 +275,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hci-o7-rYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2500" y="2821"/>
+            <point key="canvasLocation" x="-2091" y="2844"/>
+        </scene>
+        <!--Rave Hour View Controller-->
+        <scene sceneID="POg-ZS-mYg">
+            <objects>
+                <viewController id="9vv-SZ-eye" customClass="RaveHourViewController" customModule="app_danceblue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lLc-6f-wps"/>
+                        <viewControllerLayoutGuide type="bottom" id="bHg-PQ-T0l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="new-6f-pvn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIA-XD-fEN">
+                                <rect key="frame" x="20" y="40" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Aa8-6q-eLp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="Baz-8B-aq0"/>
+                                    <constraint firstAttribute="width" constant="24" id="Pv2-Kw-NZJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="Ybx-S1-vwC"/>
+                                </constraints>
+                                <state key="normal" image="Cancel"/>
+                                <connections>
+                                    <action selector="closeTapped:" destination="9vv-SZ-eye" eventType="touchUpInside" id="Kja-WG-S7X"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAVE HOUR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52E-8R-yd6">
+                                <rect key="frame" x="94.666666666666671" y="344.66666666666669" width="224.66666666666663" height="46.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="39"/>
+                                <color key="textColor" red="0.062745098040000002" green="0.24313725489999999" blue="0.81857638889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gIA-XD-fEN" firstAttribute="leading" secondItem="new-6f-pvn" secondAttribute="leading" constant="20" id="0iR-rW-iiR"/>
+                            <constraint firstItem="52E-8R-yd6" firstAttribute="centerY" secondItem="new-6f-pvn" secondAttribute="centerY" id="6lr-tR-ixF"/>
+                            <constraint firstItem="52E-8R-yd6" firstAttribute="centerX" secondItem="new-6f-pvn" secondAttribute="centerX" id="cL1-y2-9qq"/>
+                            <constraint firstItem="gIA-XD-fEN" firstAttribute="top" secondItem="lLc-6f-wps" secondAttribute="bottom" constant="20" id="tbS-qU-qi1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="raveLabel" destination="52E-8R-yd6" id="NjK-ds-ofv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="52y-18-zwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2801" y="2127"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="1X2-7w-cXS">
@@ -1015,6 +1063,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="XGg-b4-4WX" kind="presentation" identifier="ScannerSegue" id="w0z-EY-kJU"/>
+                        <segue destination="9vv-SZ-eye" kind="presentation" identifier="RaveSegue" id="e2u-4d-Hzj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4g-Xt-zM1" userLabel="First Responder" sceneMemberID="firstResponder"/>

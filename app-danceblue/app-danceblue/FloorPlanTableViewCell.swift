@@ -21,7 +21,7 @@ class FloorPlanTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         floorPlanImageView.layer.cornerRadius = 5.0
         floorPlanImageView.clipsToBounds = true
-            floorPlanImageView.image = #imageLiteral(resourceName: "DB_FloorMap")
+        floorPlanImageView.image = #imageLiteral(resourceName: "DB_FloorMap")
         titleLabel.font = Theme.Font.header
     }
     

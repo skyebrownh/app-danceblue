@@ -59,11 +59,26 @@ class HomeViewController: UITableViewController {
         //self.navigationController?.setNavigationBarHidden(true, animated: false)
         setUpNavigation(controller: self.navigationController, hidesBar: false)
         Analytics.logEvent("Home_Screen_Did_Appear", parameters: nil)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Rave"), style: .plain, target: self, action: #selector(presentScanner))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Rave"), style: .plain, target: self, action: #selector(presentRave))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "qrcode"), style: .plain, target: self, action: #selector(presentScanner))
     }
     
     @objc func presentScanner() {
         performSegue(withIdentifier: "ScannerSegue", sender: self)
+    }
+    
+    @objc func presentRave() {
+        performSegue(withIdentifier: "RaveSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RaveSegue", let raveVC = segue.destination as? RaveHourViewController {
+            raveVC.delegate = self as? RaveDelegate
+        }
+        
+        if segue.identifier == "FloorPlanSegue", let ivc = segue.destination as? ImageViewController {
+            ivc.setupMap()
+        }
     }
     
     func setupTableView() {
@@ -282,6 +297,15 @@ extension HomeViewController: SponsorDelegate {
         let svc = SFSafariViewController(url: url)
         svc.preferredControlTintColor = Theme.Color.main
         self.present(svc, animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: RaveDelegate
+extension HomeViewController: RaveDelegate {
+    
+    func closeTapped() {
+        dismiss(animated: true, completion: nil)
     }
     
 }
